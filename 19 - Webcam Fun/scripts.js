@@ -8,7 +8,8 @@ function getVideo() {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     .then(localMediaStream => {
       console.log(localMediaStream);
-      video.src = localMediaStream;
+      video.srcObject = localMediaStream;
+      video.play();
     });
 }
 
