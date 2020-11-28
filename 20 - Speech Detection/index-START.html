@@ -12,6 +12,8 @@
 <script>
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true;
 
 </script>
 
@@ -40,7 +42,7 @@
       position: relative;
       line-height: 3rem;
     }
-    
+
     p {
       margin: 0 0 3rem;
     }
