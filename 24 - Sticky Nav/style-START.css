@@ -28,7 +28,7 @@ body {
 header {
   text-align: center;
   height: 50vh;
-  background: url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
+  background: url(https://images.unsplash.com/photo-1606589199685-bc7ca2da7df9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80) bottom center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -48,6 +48,11 @@ nav {
   transition: all 0.5s;
   position: relative;
   z-index: 1;
+}
+
+.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
