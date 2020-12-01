@@ -45,12 +45,13 @@
   const divs = document.querySelectorAll('div');
 
   function logText(e) {
+    e.stopPropagation();
     console.log(this.classList.value);
     //illustrates the bubbling concept
   }
 
   divs.forEach(div => div.addEventListener('click', logText, {
-    capture: true
+    capture: false
   }));
 </script>
 </body>
