@@ -49,7 +49,9 @@
     //illustrates the bubbling concept
   }
 
-  divs.forEach(div => div.addEventListener('click', logText));
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: true
+  }));
 </script>
 </body>
 </html>
