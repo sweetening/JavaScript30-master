@@ -227,9 +227,23 @@
   function handleEnter() {
     this.classList.add('trigger-enter');
     setTimeout(() => this.classList.add('trigger-enter-active'), 150);
+    background.classList.add('open');
+
+    const dropdown = this.querySelector('.dropdown');
+
+    const dropdownCoords = getBoundingClientRect();
+    //clientRect gives info as to where the content is on the page
+    //and remains dynamic when there are different elements above or below etc
+    const navCoords = getBoundingClientRect();
+
+    const coords = {
+      height: dropdownCoords,
+      top: navCoords
+    }
   }
   function handleLeave() {
     this.classList.remove('trigger-enter', 'trigger-enter-active');
+    background.classList.remove('open');
   }
 
   triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
