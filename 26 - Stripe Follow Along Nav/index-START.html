@@ -231,15 +231,18 @@
 
     const dropdown = this.querySelector('.dropdown');
 
-    const dropdownCoords = getBoundingClientRect();
+    const dropdownCoords = dropdown.getBoundingClientRect();
     //clientRect gives info as to where the content is on the page
     //and remains dynamic when there are different elements above or below etc
-    const navCoords = getBoundingClientRect();
+    const navCoords = nav.getBoundingClientRect();
 
     const coords = {
-      height: dropdownCoords,
-      top: navCoords
-    }
+      height: dropdownCoords.height,
+      width: dropdownCoords.width
+    };
+
+    background.style.setProperty('width', `${coords.width}px`);
+    background.style.setProperty('height', `${coords.height}px`);
   }
   function handleLeave() {
     this.classList.remove('trigger-enter', 'trigger-enter-active');
